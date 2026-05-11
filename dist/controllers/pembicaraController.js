@@ -1,16 +1,22 @@
-import { Request, Response } from "express";
-import { Pembicara } from "../types/pembicara";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deletePembicaraById = exports.updatePembicaraById = exports.getPembicaraById = exports.createPembicara = exports.getAllPembicara = void 0;
 let pembicara = [];
 // GET ALL
-export const getAllPembicara = (req, res) => {
+const getAllPembicara = (req, res) => {
     res.json(pembicara);
 };
+exports.getAllPembicara = getAllPembicara;
 //menyimpan data pembicara baru
-export const createPembicara = (req, res) => { };
+const createPembicara = (req, res) => { };
+exports.createPembicara = createPembicara;
 //menampilkan pembicara berdasarkan id
-export const getPembicaraById = (req, res) => { };
+const getPembicaraById = (req, res) => { };
+exports.getPembicaraById = getPembicaraById;
 //mengupdate data pembicara berdasarkan id
-export const updatePembicaraById = (req, res) => { };
+const updatePembicaraById = (req, res) => { };
+exports.updatePembicaraById = updatePembicaraById;
 //menghapus data pembicara berdasarkan id
-export const deletePembicaraById = (req, res) => { };
+const deletePembicaraById = (req, res) => { };
+exports.deletePembicaraById = deletePembicaraById;
 //# sourceMappingURL=pembicaraController.js.map

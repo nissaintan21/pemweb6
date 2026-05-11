@@ -1,10 +1,15 @@
-import express from "express";
-import { getAllEvents, createEvent, getEventById, updateEventById, deleteEventById, } from "../controllers/eventController";
-const router = express.Router();
-router.get("/", getAllEvents);
-router.post("/", createEvent);
-router.get("/:id", getEventById);
-router.put("/:id", updateEventById);
-router.delete("/:id", deleteEventById);
-export default router;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const eventController_1 = require("../controllers/eventController");
+const router = express_1.default.Router();
+router.get("/", eventController_1.getAllEvents);
+router.post("/", eventController_1.createEvent);
+router.get("/:id", eventController_1.getEventById);
+router.put("/:id", eventController_1.updateEventById);
+router.delete("/:id", eventController_1.deleteEventById);
+exports.default = router;
 //# sourceMappingURL=eventRoute.js.map

@@ -1,12 +1,14 @@
-import { Request, Response } from 'express';
-import { Event } from "../types/event";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteEventById = exports.updateEventById = exports.getEventById = exports.createEvent = exports.getAllEvents = void 0;
 let events = [];
 //1. menampilkan semua event 
-export const getAllEvents = (req, res) => {
+const getAllEvents = (req, res) => {
     res.json(events);
 };
+exports.getAllEvents = getAllEvents;
 //2. menyimpan data event baru 
-export const createEvent = (req, res) => {
+const createEvent = (req, res) => {
     try {
         const { nama, tanggal, lokasi } = req.body;
         // validasi jika ada data yang belum diisi 
@@ -31,10 +33,14 @@ export const createEvent = (req, res) => {
             .json({ message: "Terjadi kesalahan saat membuat event", error });
     }
 };
+exports.createEvent = createEvent;
 //3. menampilkan data event berdasarkan id
-export const getEventById = (req, res) => { };
+const getEventById = (req, res) => { };
+exports.getEventById = getEventById;
 //4. menupdate data event berdasarkan id
-export const updateEventById = (req, res) => { };
+const updateEventById = (req, res) => { };
+exports.updateEventById = updateEventById;
 //5. menghapus data event berdasarkan id
-export const deleteEventById = (req, res) => { };
+const deleteEventById = (req, res) => { };
+exports.deleteEventById = deleteEventById;
 //# sourceMappingURL=eventController.js.map
